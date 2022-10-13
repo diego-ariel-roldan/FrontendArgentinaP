@@ -4,7 +4,7 @@
 }
 /* color de fondo de acerca de mí*/
 div{
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(235, 227, 227);
   text-align:center;
 }
 
@@ -35,7 +35,7 @@ margin-top:30%;
 
   #perfil{
     left: 33%;
-  
+
     position: absolute;
     width: 30%;
     border-radius: 100%;
