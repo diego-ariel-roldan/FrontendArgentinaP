@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import{ FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderlogoComponent } from './header/componente-header/headerlogo/headerlogo.component';
@@ -13,7 +14,9 @@ import{ NgCircleProgressModule}from 'ng-circle-progress';
 import { PorcentajeComponent } from './porcentaje/porcentaje.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
-import{HttpClient, HttpClientModule} from '@angular/common/http';
+import{ HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +28,18 @@ import{HttpClient, HttpClientModule} from '@angular/common/http';
     MieducacionComponent,
     PorcentajeComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
      FormsModule,
     NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
