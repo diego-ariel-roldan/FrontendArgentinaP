@@ -8,13 +8,14 @@ img{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  background-color: blue;
 }
 @media(max-width:700px){
-   
+
     .boton1{
 display:none
     }
- 
+
    }
 
 
@@ -22,8 +23,8 @@ display:none
 
    .boton2{
     display:none;  }
-  
-  
+
+
   }
   a{
     padding:3px;

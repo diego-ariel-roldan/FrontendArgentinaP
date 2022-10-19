@@ -17,6 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 import{ HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NewExperienciaComponent } from './miexperiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './miexperiencia/edit-experiencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { LoginComponent } from './login/login.component';
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
