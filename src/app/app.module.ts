@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NewExperienciaComponent } from './miexperiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './miexperiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './mieducacion/neweducacion.component';
+import { EditeducacionComponent } from './mieducacion/editeducacion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { EditExperienciaComponent } from './miexperiencia/edit-experiencia.compo
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent
   ],
   imports: [
     BrowserModule,
