@@ -1,148 +1,42 @@
 <div class="row">
-  <h3> Conocimientos</h3>
-<div class="col-sm-4  text-center">
-  <circle-progress
-  [percent]="90"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/html.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div class=" col-sm-4 text-center">
-  <circle-progress
-  [percent]="75"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/css.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="68"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/js.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class=" col-sm-4 text-center">
-  <circle-progress
-  [percent]="50"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/angular.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="50"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="70"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/vue.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="65"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/laravel.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
 
+  <h1>Habilidades</h1>
+  <div class="col-lg-2">
+      <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+  </div>
+
+
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+      <circle-progress
+      [percent]="(skill.porcentaje)"
+      [radius]="90" [imageSrc]="''"
+      [title]="(skill.nombre)"
+      [titleColor]="'#212F3C'"
+      [showTitle]="true"
+      [showImage]="false"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [showUnits]="false"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="2"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600">
+      </circle-progress>
+
+      <div>
+          <td *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                  <i class="bi bi-pencil-fill"></i></button>
+          </td>
+          <td *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="delete(skill.id)">
+                  <i class="bi bi-trash-fill"></i></button>
+          </td>
+      </div>
+
+  </div>
 </div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="35"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="70"
-  [imageWidth]="70"
-  [imageSrc]="'../assets/Git-hud.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="60"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/photoshop.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-<div  class="col-sm-4 text-center">
-  <circle-progress
-  [percent]="60"
-  [radius]="70"
-  [showImage]="true"
-  [imageHeight]="100"
-  [imageWidth]="100"
-  [imageSrc]="'../assets/Word.png'"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'black'"
-  [innerStrokeColor]="'grey'"
-  [animation]="true"
-  [animationDuration]="800"
-></circle-progress>
-</div>
-</div>
+
