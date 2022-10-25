@@ -7,6 +7,7 @@ h2 {
   position: absolute;
 }
 .argentina {
+  text-align:center;
   color: black;
   text-shadow:
     -1px -1px 0 white,
@@ -16,6 +17,7 @@ h2 {
 }
 
 .programa{
+  text-align:center;
   color: #09f;
   animation: programa 3s ease-in-out infinite;
 }
@@ -52,7 +54,7 @@ h2 {
 .letras{
 
   bottom: 360px ;
-  
+
 }
 .mover{
  animation:8s mover 1;
