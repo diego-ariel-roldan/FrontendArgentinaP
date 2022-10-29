@@ -20,7 +20,7 @@ export class SkillService {
   }
 
   public detail(id: number): Observable<Skill>{
-    return this.httpClient.get<Skill>(this.URL +`detail/${id}`);
+    return this.httpClient.get<Skill>(this.URL+`detail/${id}`);
   }
 
   public save(skill: Skill): Observable<any>{
