@@ -11,8 +11,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL ='https://argentinaprog.herokuapp.com/skill/';//'http://localhost:8080/skill/';
-
+  URL ='https://argentinaprog.herokuapp.com/skill/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Skill[]>{
